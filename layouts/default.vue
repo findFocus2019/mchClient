@@ -69,15 +69,15 @@ import "material-design-icons-iconfont/dist/material-design-icons.css";
 export default {
   async created(){
     console.log('page init')
-    let ret = await this.$store.dispatch('adminGroupInfo', {})
-    let rules = ret.data.rules || []
-    rules.forEach(rule => {
-      this.items.push({
-        icon: rule.icon,
-        title: rule.name,
-        to: rule.router      
-      })
-    });
+    // let ret = await this.$store.dispatch('adminGroupInfo', {})
+    // let rules = ret.data.rules || []
+    // rules.forEach(rule => {
+    //   this.items.push({
+    //     icon: rule.icon,
+    //     title: rule.name,
+    //     to: rule.router      
+    //   })
+    // });
   },
   data() {
     return {
@@ -85,10 +85,10 @@ export default {
       drawer: true,
       fixed: false,
       items: [
-        // { icon: "apps", title: "首页", to: "/" },
+        { icon: "apps", title: "首页", to: "/" },
         // { icon: "people", title: "用户管理", to: "/user" },
         // { icon: "rss_feed", title: "资讯管理", to: "/posts" },
-        // { icon: "shopping_cart", title: "商城管理", to: "/mall" },
+        { icon: "shopping_cart", title: "商品管理", to: "/mall/goods" },
         // { icon: "account_circle", title: '账户管理', to: '/account' },
         // { icon: "settings", title: "系统设置", to: "/config" }
       ],

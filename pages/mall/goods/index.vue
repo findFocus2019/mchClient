@@ -1,13 +1,13 @@
 <template>
   <v-layout row wrap>
-    <sub-nav :pid="5" :rules="this.$store.state.adminGroupRules" />
+    <!-- <sub-nav :pid="5" :rules="this.$store.state.adminGroupRules" /> -->
     <v-flex xs12>
       <v-card>
         <v-subheader>
-          <v-btn-toggle >
+          <!-- <v-btn-toggle >
             <v-btn  :color="(type == 1) ? 'primary' : ''" @click="chooseGoodsType(1)">自营</v-btn>
             <v-btn  :color="(type == 2) ? 'primary' : ''" @click="chooseGoodsType(2)">京东</v-btn>
-          </v-btn-toggle>
+          </v-btn-toggle> -->
         </v-subheader>
         <v-card-title primary-title>
           <v-text-field

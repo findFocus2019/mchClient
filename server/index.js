@@ -10,7 +10,7 @@ const methodOverride = require("method-override");
 const session = require("express-session"); // session中间件
 
 const host = process.env.HOST || "127.0.0.1";
-const port = process.env.PORT || 5100;
+const port = process.env.PORT || 5200;
 
 app.set("port", port);
 

@@ -61,6 +61,10 @@ router.use("/:module/:action", async (req, res) => {
     console.log('session saved: ', ret.session)
     // req.session = ret.session // 存session
     req.session.AUTH = ret.session.AUTH
+
+    if(ret.session.mch_id){
+      req.session.mch_id = ret.session.mch_id
+    }
   }
 
   return res.json(ret);

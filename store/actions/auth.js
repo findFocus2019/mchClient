@@ -4,7 +4,7 @@ export default {
   async login({
     state
   }, body) {
-    let ret = await request.post('/api/auth/login', body)
+    let ret = await request.post('/api/auth/mchLogin', body)
     console.log('actions auth login ret', ret)
     if (ret.code == 0) {
       state.AUTH.isLogin = true
