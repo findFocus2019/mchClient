@@ -56,14 +56,17 @@
               ></v-switch>
             </td>
             <td class="pt-3">
-              <v-switch
+              <!-- <v-switch
                 v-model="props.item.status"
                 :label="props.item.status == 0 ? '已下架' :'已上架' "
                 :color="props.item.status == 0 ? 'error' :'blue' "
                 @change="itemUpdate('status' , props.item)"
                 v-if="props.item.status >= 0"
               ></v-switch>
-              <span v-else>已删除</span>
+              <span v-else>已删除</span> -->
+              <span v-if="props.item.status == 0">已下架</span>
+              <span v-if="props.item.status == 1">已上架</span>
+              <span v-if="props.item.status == -1">删除</span>
             </td>
             <td>
               <v-btn small color="blue" @click="infoModify(props.item)">编辑</v-btn>
